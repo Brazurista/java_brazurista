@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Icones -->
+  <script src="https://kit.fontawesome.com/177f0e37f6.js" crossorigin="anonymous"></script>
+  <!-- CSS -->
+  <link href="/css/cadastro.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/global.css">
+  <title>Login</title>
+</head>
+<body>
+  <main>
+    <div class="container">
+      <div class="login-google">
+        <div class="brazurista">
+          <h1>Bem vindo!</h1>
+          <br>
+          <p>Entre com sua conta no Brazurista, faça login com suas informações pessoais</p>
+          <br>
+          <input class="botao" type="submit" value="Faça seu login" />
+        </div>
+      </div>
+      <div class="container-form">
+          <form class="form" id="form-login" method="POST" action="home.html">
+              <h2 class="titulo">Crie sua conta, e aproveite o Brazurista!</h2>
+              <div class="container-input">
+                <input class="input" type="text" name="nome" required id="nome" placeholder="Nome:"/>
+              </div>
+              <div class="container-input">
+                <input class="input" type="text" name="telefone" required id="nome" maxlength="10" placeholder="Telefone:"/>
+              </div>     
+              <div class="container-input">
+                <input class="input" type="text" name="cpf" required id="cpf"  placeholder="CPF:" />
+              </div>   
+              <div class="container-input">
+                <input class="input" type="email" name="email" required id="email"  placeholder="Email:" />
+              </div>   
+              <div class="container-input">
+                <input class="input"  placeholder="Senha:" type="password" name="password" required id="password"pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                title="A senha deve conter pelo menos 8 caracteres, uma letra maiúscula, uma letra minúscula e um número." />
+
+                <br>
+                <br>
+                <div class="checkbox">
+                  <input type="checkbox" id="termos-de-uso">
+                  <label for="termos-de-uso">Li e concordo com os termos de uso</label>
+                </div>
+                <br>
+                <br>
+                <input class="botao" type="submit" value="Criar conta" />
+              </div>              
+            </div>
+          </form>
+      </div>
+    </div>
+</main>
+<script>
+    document.getElementById("form-login").addEventListener("submit", function (event) {
+    event.preventDefault(); // Impede o envio padrão do formulário
+
+    var userName = document.getElementById("email").value;
+    var urlPersonalizada = "home.html?userName=" + encodeURIComponent(userName);
+
+    // Redireciona para a URL personalizada
+    window.location.href = urlPersonalizada;
+});
+
+  document.addEventListener("DOMContentLoaded", function () {
+  const input = document.getElementById("email");
+  const input2 = document.getElementById("password");
+
+  function  placeholder(input, label) {
+    if (input.value.trim() !== "") {
+      label.classList.add("has-content");
+    } else {
+      label.classList.remove("has-content");
+    }
+  }
+
+  input.addEventListener("input", function () {
+    const label = document.querySelector('.placeholder');
+    placeholder(input, label);
+  });
+
+  input2.addEventListener("input", function () {
+    const label = document.querySelector('.placeholder2');
+    placeholder(input2, label);
+  });
+});
+
+</script>
+</body>
+</html>
