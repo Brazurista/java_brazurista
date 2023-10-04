@@ -18,26 +18,26 @@ public class UsuarioController {
 	private UsuarioRepository usuarioRepository;
 	
 	@GetMapping("/cadastro")
-	String novoProduto(Usuario usuario, Model model) {
+	public String novoProduto(Usuario usuario, Model model) {
 		
 		model.addAttribute("usuario", usuario);
-		return "Cadastro";
+		return "cadastro";
 	}
 	
 	// Cadastrar o usuário
 	
 	@PostMapping("/add-usuario")
-	String addNovoUsuario(Usuario usuario, Model model) {
+	public String addNovoUsuario(Usuario usuario, Model model) {
 		
 		usuario.setCodStatusUsuario(true);
-		Usuario usuarioBd = usuarioRepository.save(usuario);
+		usuarioRepository.save(usuario);
 		
-		return "redirect:/brazurista/usuario/cadastro/sucesso";
+		return "redirect:/brazurista/usuario/cadastro";
 	}
 	
 	// Abrir formulário de Login
 	@GetMapping("/cadastro/sucesso")
-	String showPageSucessoCadastro() {
+	public String showPageSucessoCadastro() {
 		
 		return "sucesso-usuario";
 	}

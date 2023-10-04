@@ -1,0 +1,182 @@
+*{
+    margin:0px;
+    padding: 0px;
+}
+body{
+    background-color: #FFFFFF;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.header{
+    height: 10vh;
+    background-color: #7FB239;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: larger;
+    font-weight: bold;
+    position: relative;
+   
+}
+
+.header ul{
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
+
+.header ul li:not(:last-child) a {
+  margin-left: 15px;
+  margin-right: 10px;
+  margin-top: 0px;
+  cursor: pointer;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+
+
+.input-login{
+    width: 140px;
+    height: 4.5vh;
+    background-color: #638B2C;
+    border: 1.5px solid #527521;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.input-login a{
+  color: rgb(24, 23, 23);
+  cursor: pointer;
+  text-decoration: none;
+  margin-left: 0px;
+}
+.input-login:hover{
+    background-color:#7FB239;
+}
+.logo{
+  height: 150px;
+  width: 150px;
+  margin-left: 50px;
+}
+/* menu mobile */
+#btn-mobile {
+    display: none;
+    color: rgb(255, 255, 255);
+  }
+
+.opcao{
+    display: flex;
+    text-align: center;
+    position: relative;
+    flex-direction: column;
+    font-size: 0.9rem;
+    font-weight: 500;
+    position: relative;
+}
+.opcao::after{
+  position: absolute;
+  top: 5vh;
+  left: -11vw;
+  content: "";
+  width: 10vw;
+  height: 1.8px;
+  background-color: black
+ 
+}
+.opcao::before{
+  position: absolute;
+  top: 5vh;
+  right: -11vw;
+  content: "";
+  width: 10vw;
+  height: 1.8px;
+  background-color: black
+ 
+}
+.opcao a{
+    color: black;
+    text-decoration: none;
+}
+.opcao a:hover{
+  text-decoration: underline;
+}
+@media (max-width: 768px){
+    /* menu responsivo */
+    #menu {
+        display: block;
+        position: absolute;
+        width: 0;
+        top: 0px;
+        padding-left: 40px;
+        right: 0px;
+        background-color: #7FB239;
+        transition: 0.6s;
+        z-index: 10;
+        height: 100vh;
+        visibility: hidden;
+        overflow-y: hidden;
+        margin: 0px;
+        color: white;
+    }
+    #nav.active #menu {
+    width: 70%;
+    visibility: visible;
+    overflow-y: hidden;
+    overflow: hidden;
+  }
+  
+  body.nav-active  {
+    overflow-y: hidden;
+    backdrop-filter: blur(500px);
+  }
+   #menu li{
+     padding: 1rem 0;
+    margin-bottom: 2px;
+    width: 220px;
+   }
+   #btn-mobile {
+     display: flex;
+     padding: 0.5rem 1rem;
+     font-size: 1rem;
+     border: none;
+     background: none;
+     cursor: pointer;
+     gap: 0.5rem;
+   }
+   #hamburger {
+     border-top: 2px solid;
+     width: 20px;
+     overflow: hidden;
+     z-index: 100;
+   }
+   #hamburger::after,
+   #hamburger::before {
+     content: '';
+     display: block;
+     width: 20px;
+     height: 2px;
+     background: currentColor;
+     margin-top: 5px;
+     transition: 0.3s;
+     position: relative;
+     overflow: hidden;
+     z-index: 100;
+   }
+   #nav.active #hamburger {
+     border-top-color: transparent;
+     overflow: hidden;
+   }
+   #nav.active #hamburger::before {
+     transform: rotate(135deg);
+     overflow: hidden;
+   }
+   #nav.active #hamburger::after {
+     transform: rotate(-135deg);
+     top: -7px;
+     overflow: hidden;
+   }
+}

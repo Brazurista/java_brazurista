@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Icones -->
+  <script src="https://kit.fontawesome.com/177f0e37f6.js" crossorigin="anonymous"></script>
+  <!-- CSS -->
+  <link href="./css/login.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/global.css">
+  <title>Login</title>
+</head>
+<body>
+  <main>
+    <div class="container">
+      <div class="login-google">
+        <div class="brazurista">
+          <a href="index.html">
+          <img src="img/brazurista.png
+          " alt="" class="logo-1">
+          </a>
+          <br>
+          <div class="entrar-google">
+            <img src="img/google-37.png" class="img" alt=""><span>Entre com google</span>
+           </div>
+          <div class="entrar-google">
+            <i class="fa-solid fa-at" style="font-size: 1.8rem;"></i><span>Entre com Email</span>
+          </div>
+        </div>
+      </div>
+      <div class="container-form">
+          <form class="form" id="form-login" method="POST" action="home.html">
+              <h2 class="titulo">Entre na sua conta</h2>
+              <div class="container-input">
+                <input class="input" type="text" name="userName" required id="email" />
+                <label class="placeholder" for="email">UserName:</label>
+              </div>   
+              <div class="container-input">
+                <input class="input" type="password" name="password" required id="password" />
+                <label class="placeholder2" for="email">Senha:</label>
+              </div>              
+              <a class="esqueceu" href="#">Esqueceu a senha?</a>
+                <div class="container-btn">
+              <input class="botao" type="submit" value="Faça seu login" />
+              <div class="opcao">
+                <br>
+                <span class="cadastro">  Ainda não tem uma conta?</span>
+                <br>
+                <a href="cadastro.html" >Criar uma conta</a>
+              </div>
+            </div>
+          </form>
+      </div>
+    </div>
+</main>
+<script>
+  document.getElementById("form-login").addEventListener("submit", function (event) {
+    event.preventDefault(); // Impede o envio padrão do formulário
+
+    var userName = document.getElementById("email").value;
+    var urlPersonalizada = "home.html?userName=" + encodeURIComponent(userName);
+
+    // Redireciona para a URL personalizada
+    window.location.href = urlPersonalizada;
+});
+
+  document.addEventListener("DOMContentLoaded", function () {
+  const input = document.getElementById("email");
+  const input2 = document.getElementById("password");
+  
+  function  placeholder(input, label) {
+    if (input.value.trim() !== "") {
+      label.classList.add("has-content");
+    } else {
+      label.classList.remove("has-content");
+    }
+  }
+
+  input.addEventListener("input", function () {
+    const label = document.querySelector('.placeholder');
+    placeholder(input, label);
+  });
+
+  input2.addEventListener("input", function () {
+    const label = document.querySelector('.placeholder2');
+    placeholder(input2, label);
+  });
+});
+
+</script>
+</body>
+</html>

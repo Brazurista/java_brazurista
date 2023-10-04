@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <!-- css -->
+    <link rel="stylesheet" href="/css/index.css"> 
+    <link rel="stylesheet" href="/css/global.css">
+    <link rel="stylesheet" href="/css/home.css">
+    <!-- links -->
+    <script src="https://kit.fontawesome.com/ae37c4f9c1.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header id="header_pesquisa" class="header">
+        <div>
+        <a href="index.html">
+            <img src="img/Brazurista.png" class="logo" alt="">
+        </a>
+        </div>
+        <nav class="links" id="nav">
+            <button aria-label="Abrir Menu"   id="btn-mobile" aria-haspopup="true" aria-controls="menu" aria-expanded="false"> 
+            <span id="hamburger"></span> 
+            </button> 
+           
+            <ul id="menu" role="menu">
+                <li>
+                    <span><a class="link_nav" >Ponto turístico</a></span>
+                </li>
+                <li>
+                    <span><a class="link_nav" >Restaurante</a></span>
+                </li>
+                <li>
+                    <div class="user">
+                        <span id="username">
+                            
+                        </span>
+                        <div class="user-circle">
+                            <i class="fa-solid fa-user"></i>
+                        </div>
+                    </div>
+                </li>
+                 <li>
+                 </li>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main class="container-main">
+        <img src="img/logo-sp.jpg" alt="" class="img-top">
+        <section class="container-search">
+                <form action="pesquisa.html" class="search-bar">
+                    <input type="text" class="search" placeholder="Digite seu destino aqui" name="pesquisa" id="source">
+                    <span class="lupa"><i class="fa-solid fa-magnifying-glass"></i></span>
+                </form>
+        </section>
+        <section class="container-slider">
+            <span>Os melhores destinos para aproveitar com a família!</span>
+            <div class="btn-left" onclick="direcao(1)">&#60;</div>
+            <div class="content-slide" id="content-slide-01">
+            <div class="block" id="ponto-rj">
+                <img src="img/rio-de-janeiro.jpg" class="img-slide">
+                <div class="block-name"><span>Rj | Santa Teresa</span></div>
+            </div>
+            <div class="block">
+                <img src="img/sao-paulo.jpg" class="img-slide">
+                <div class="block-name"><span>Sp | São Paulo</span></div>
+            </div>
+            <div class="block">
+                <img src="img/gramado.jpg" class="img-slide">
+                <div class="block-name"><span>Rs | gramado</span></div>
+            </div>
+            <div class="block">
+                <img src="img/bahia.jpg" class="img-slide">
+                <div class="block-name"><span>Bh | Salvador</span></div>
+            </div>
+            <div class="block">
+                <img src="img/foz-do-iguacu.jpg.crdownload" class="img-slide" >
+                <div class="block-name"><span>Pr |  Foz do Iguaçu</span></div>
+            </div>
+            <div class="block">
+                <img src="img/lencou-maranheses.jpg" class="img-slide" >
+                <div class="block-name"><span>Ma | Lençóis Maranhenses</span></div>
+            </div>
+
+            </div>
+            <div class="btn-right" onclick="direcao(2)">&#62;</div>
+        </section>
+        <section class="container-slider">
+            <span>Sonhe com sua proxima viagem &#129310; </span>
+            <div class="btn-left" onclick="direcao2(1)">&#60;</div>
+            <div class="content-slide" id="content-slide-02">
+            <div class="block"><img src="img/rio-de-janeiro.jpg" class="img-slide"></div>
+            <div class="block"><img src="img/sao-paulo.jpg" class="img-slide"></div>
+            <div class="block"><img src="img/gramado.jpg" class="img-slide"></div>
+            <div class="block"><img src="img/bahia.jpg" class="img-slide"></div>
+            <div class="block"><img src="img/foz-do-iguacu.jpg.crdownload" class="img-slide" ></div>
+            <div class="block"><img src="img/lencou-maranheses.jpg" class="img-slide" ></div>
+
+            </div>
+            <div class="btn-right" onclick="direcao2(2)">&#62;</div>
+        </section>
+    </main>
+    <footer class="footer">
+        <h3>
+            Sobre o Brazurista
+        </h3>
+        <h3>
+            Siga nossas redes sociais
+        </h3>
+        <h3>
+            Entre em contato conosco
+        </h3>
+        <span>
+            informações gerais<br><br>
+            Termo de uso e politica de privacidade
+        </span>
+        <div style="font-size: 1.3rem;">
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-x-twitter"></i>
+            <i class="fa-brands fa-facebook"></i>
+        </div>
+        <span>
+            brazurista@gmail.com
+            <br>
+            +55 (11) 8364-1287
+            <br>
+            <span>fale conosco</span>
+        </span>
+    </footer>
+   <script src="js/header.js"></script>
+   <script>
+        
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+        const userName = urlParams.get('userName');
+
+        document.getElementById('username').textContent = userName
+
+        const pontoRj = document.getElementById('ponto-rj')
+
+         
+        pontoRj.addEventListener('click', function () {
+            window.location.href = 'ponto-Rj.html';
+            });
+
+        
+        function direcao(e){
+            let direcao = document.querySelector("#content-slide-01");
+
+            if(e === 1){
+                direcao.scrollLeft = direcao.scrollLeft - 500
+            }
+
+            else if( e == 2){
+                direcao.scrollLeft = direcao.scrollLeft + 500
+               
+            }
+        }
+        function direcao2(e){
+            let direcao2 = document.querySelector("#content-slide-02");
+
+            if(e === 1){
+                direcao2.scrollLeft = direcao2.scrollLeft - 500
+
+            }
+
+            else if( e == 2){
+                direcao2.scrollLeft = direcao2.scrollLeft + 500
+            }
+        }
+
+   </script>
+</body>
+</html>

@@ -1,0 +1,230 @@
+ 
+   *{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+   }
+   .container{
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      justify-content:space-between;
+   }
+   .login-google{
+      width: 45vw;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+   }
+   .container-form{
+      width: 55vw;
+      height: 100vh;
+      background-color: #D1E8B2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+    .form{
+        position: absolute;
+        display: flex;
+        width: 30vw;
+        font-size: 1.3rem;
+        align-items: center;
+        flex-direction: column;
+    }
+    .container-form h2{
+       font-weight: 600;
+       margin-bottom: 80px;
+    }
+
+    .container-input{
+      position: relative;
+      margin-bottom: 20px;
+      height: 15vh;
+    }
+    
+    .placeholder {
+      position: absolute;
+      top: 34px;
+      left: 8px;
+      font-size: 0.9rem;
+      color: white;
+      transition: all 0.3s ease-in-out;
+      pointer-events: none;
+      transform: translateY(-50%);
+      opacity: 0.5;
+    }
+    .placeholder2 {
+      position: absolute;
+      top: 34px;
+      left: 8px;
+      font-size: 0.9rem;
+      color: white;
+      transition: all 0.3s ease-in-out;
+      pointer-events: none;
+      transform: translateY(-50%);
+      opacity: 0.5;
+    }
+    .input{
+      margin-top: 20px;
+      height: 30px;
+      max-width: 400px;
+      width: 30vw;
+      background-color: #7FB239;
+      color: aliceblue;
+      padding-left: 10px;
+      border: 0px solid black;
+      border-radius: 5px;
+    }
+    
+    .input:focus + .placeholder{
+      top: -5px;
+      left: -5px;
+      font-size: 1.2rem;
+      font-weight: 600;
+      padding: 0 5px;
+      opacity: 1;
+      color: rgb(0, 0, 0);
+    }
+    .input:focus{
+      background-color: #b3dd7a;
+    }
+    .input:focus + .placeholder2{
+      top: -5px;
+      left: -5px;
+      font-size: 1.2rem;
+      font-weight: 600;
+      padding: 0 5px;
+      opacity: 1;
+      color: rgb(0, 0, 0);
+    }
+    
+    .placeholder.has-content {
+      top: -5px;
+      left: -5px;
+      font-size: 1.2rem;
+      font-weight: 600;
+      padding: 0 5px;
+      opacity: 1;
+      color: rgb(0, 0, 0);
+    }
+    .placeholder2.has-content {
+      top: -5px;
+      left: -5px;
+      font-size: 1.2rem;
+      font-weight: 600;
+      padding: 0 5px;
+      opacity: 1;
+      color: rgb(0, 0, 0);
+    }
+    .esqueceu{
+        margin-top: -30px;
+        margin-left: 10px;
+        margin-bottom: 30px;
+        color: black;
+        font-size: 0.8rem;
+        align-self: flex-start;
+        font-weight: 600;
+        text-decoration: none;
+    }
+
+    .esqueceu:hover{
+     text-decoration:underline;
+  }
+
+    .esqueceu:hover{
+      cursor: pointer;
+  }
+    .container-btn{
+      display: flex;
+      width: 40vw;
+      flex-direction: column;
+      align-items: center;
+      margin-right: 25px;
+    }
+
+    .container-btn .botao{
+      height: 30px;
+      background-color: #7FB239;
+      color: aliceblue;
+      border: 0px solid black;
+      border-radius: 5px;
+      width: 150px;
+      padding: 0px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .container-btn .botao:hover{
+      border: 1.5px solid #4d6d1f;
+      color: #4d6d1f;
+      background-color: #D1E8B2;
+    }
+
+    
+    .logo-1{
+      height: 200px;
+      width: 200px;
+      position: absolute;
+      top: -20vh;
+      left: 10vw;
+    }
+    .brazurista{
+      position: absolute;
+      top: 35vh;
+      margin-right: 15vw;
+      position: relative;
+      height: 40vh;
+    }
+    .brazurista::after{
+       content: "";
+       height: 60vh;
+       width: 2px;
+       background-color: #7FB239;
+       position: absolute;
+       top: -15vh;
+       left: 40px;
+    }
+    .entrar-google img{
+      height: 30px;
+      width: 30px;
+    }
+    .entrar-google {
+      font-size: 1.3rem;
+      font-weight: 450;
+      display: flex;
+      height: 30px;
+      align-items: center;
+      margin-top:80px;
+      cursor: pointer;
+      margin-left: 120px;
+    }
+    .entrar-google:last-child{
+      margin-top:40px;
+    }
+    .entrar-google span{
+      margin-left: 15px;
+      cursor:pointer;
+    }
+
+    
+/* Media queries para telas menores */
+@media screen and (max-width: 768px) {
+  .container-form {
+      padding: 20px;
+  }
+
+  .form input {
+      width: 100%;
+  }
+
+  .container-btn {
+      margin-top: 10px;
+  }
+
+  .entrar-google {
+      font-size: medium;
+  }
+}

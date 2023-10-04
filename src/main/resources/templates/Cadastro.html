@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt_BR">
-
+<html lang="pt_br">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,7 +8,7 @@
   <!-- CSS -->
   <link href="/css/cadastro.css" rel="stylesheet">
   <link rel="stylesheet" href="/css/global.css">
-  <title>Cadastro</title>
+  <title>Login</title>
 </head>
 <body>
   <main>
@@ -24,24 +23,22 @@
         </div>
       </div>
       <div class="container-form">
-          <form class="form" th:object="${usuario}" th:action="@{/turismo/usuario/add-usuario}" id="form-login" method="POST" action="home.html">
+          <form class="form" th:action="@{/brazurista/usuario/add-usuario}" th:object="${usuario}" id="form-login" method="post">
               <h2 class="titulo">Crie sua conta, e aproveite o Brazurista!</h2>
               <div class="container-input">
-                <input class="input" type="text" th:field="*{nome}" required id="nome" placeholder="Nome:"/>
+                <input class="input" th:field="*{nome}" type="text" name="nome"  required id="nome" placeholder="Nome:"/>
               </div>
               <div class="container-input">
-                <input class="input" type="text" th:field="*{telefone}" required id="nome" maxlength="10" placeholder="Telefone:"/>
+				<input class="input" type="text" th:field="*{telefone}" name="telefone" required id="nome" maxlength="10" placeholder="Telefone:"/>
               </div>     
               <div class="container-input">
-                <input class="input" type="text" th:field="*{cpf}" required id="cpf"  placeholder="CPF:" />
+                <input class="input" type="text" th:field="*{cpf}" name="cpf" required id="cpf"  placeholder="CPF:" />
               </div>   
               <div class="container-input">
-                <input class="input" type="email" th:field="*{email}" required id="email"  placeholder="Email:" />
+               <input class="input" type="email" name="email" th:field="*{email}" required id="email" placeholder="Email:" />
               </div>   
-              <div class="container-input">
-                <input class="input"  placeholder="Senha:" type="password" th:field="*{senha}" required id="password"pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
-                title="A senha deve conter pelo menos 8 caracteres, uma letra maiúscula, uma letra minúscula e um número." />
-
+              <div class="container-input">  
+               <input class="input" th:field="*{senha}" placeholder="Senha:" type="password" name="senha" required id="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="A senha deve conter pelo menos 8 caracteres, uma letra maiúscula, uma letra minúscula e um número." />                
                 <br>
                 <br>
                 <div class="checkbox">
@@ -71,7 +68,7 @@
   document.addEventListener("DOMContentLoaded", function () {
   const input = document.getElementById("email");
   const input2 = document.getElementById("password");
-
+  
   function  placeholder(input, label) {
     if (input.value.trim() !== "") {
       label.classList.add("has-content");

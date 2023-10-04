@@ -23,9 +23,22 @@ public class Usuario {
 	
 	private boolean codStatusUsuario;
 	
+	// Sette's e Getter's
+	
 	public Usuario()
 	{
 		
+	}
+	public Usuario(Long id, String cpf, String nome, String email, String senha, String telefone,
+			boolean codStatusUsuario) {
+		super();
+		this.id = id;
+		this.cpf = cpf;
+		this.nome = nome;
+		this.email = email;
+		this.senha = senha;
+		this.telefone = telefone;
+		this.codStatusUsuario = codStatusUsuario;
 	}
 	public Long getId() {
 		return id;
@@ -82,7 +95,7 @@ public class Usuario {
 	public void setCodStatusUsuario(boolean codStatusUsuario) {
 		this.codStatusUsuario = codStatusUsuario;
 	}
+}
 
-	// Sette's e Getter's
 	
 	
