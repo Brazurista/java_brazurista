@@ -16,15 +16,17 @@ public class Usuario {
     @GeneratedValue(strategy = GenerationType.IDENTITY) //Auto-Incremento
 	private Long id;
 	private String cpf;
-	private String nomeComp;
+	private String nome;
 	private String email;
 	private String senha;
 	private String telefone;
 	
 	private boolean codStatusUsuario;
-
-	// Sette's e Getter's
 	
+	public Usuario()
+	{
+		
+	}
 	public Long getId() {
 		return id;
 	}
@@ -41,14 +43,12 @@ public class Usuario {
 		this.cpf = cpf;
 	}
 
-	
-
-	public String getNomeComp() {
-		return nomeComp;
+	public String getNome() {
+		return nome;
 	}
 
-	public void setNomeComp(String nomeComp) {
-		this.nomeComp = nomeComp;
+	public void setNome(String nome) {
+		this.nome = nome;
 	}
 
 	public String getEmail() {
@@ -75,12 +75,14 @@ public class Usuario {
 		this.telefone = telefone;
 	}
 
-	public boolean getCodStatusUsuario() {
+	public boolean isCodStatusUsuario() {
 		return codStatusUsuario;
 	}
 
 	public void setCodStatusUsuario(boolean codStatusUsuario) {
 		this.codStatusUsuario = codStatusUsuario;
 	}
+
+	// Sette's e Getter's
 	
-}
+	

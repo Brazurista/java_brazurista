@@ -9,7 +9,7 @@
   <!-- CSS -->
   <link href="/css/cadastro.css" rel="stylesheet">
   <link rel="stylesheet" href="/css/global.css">
-  <title>Login</title>
+  <title>Cadastro</title>
 </head>
 <body>
   <main>
@@ -24,22 +24,22 @@
         </div>
       </div>
       <div class="container-form">
-          <form class="form" id="form-login" method="POST" action="home.html">
+          <form class="form" th:object="${usuario}" th:action="@{/turismo/usuario/add-usuario}" id="form-login" method="POST" action="home.html">
               <h2 class="titulo">Crie sua conta, e aproveite o Brazurista!</h2>
               <div class="container-input">
-                <input class="input" type="text" name="nome" required id="nome" placeholder="Nome:"/>
+                <input class="input" type="text" th:field="*{nome}" required id="nome" placeholder="Nome:"/>
               </div>
               <div class="container-input">
-                <input class="input" type="text" name="telefone" required id="nome" maxlength="10" placeholder="Telefone:"/>
+                <input class="input" type="text" th:field="*{telefone}" required id="nome" maxlength="10" placeholder="Telefone:"/>
               </div>     
               <div class="container-input">
-                <input class="input" type="text" name="cpf" required id="cpf"  placeholder="CPF:" />
+                <input class="input" type="text" th:field="*{cpf}" required id="cpf"  placeholder="CPF:" />
               </div>   
               <div class="container-input">
-                <input class="input" type="email" name="email" required id="email"  placeholder="Email:" />
+                <input class="input" type="email" th:field="*{email}" required id="email"  placeholder="Email:" />
               </div>   
               <div class="container-input">
-                <input class="input"  placeholder="Senha:" type="password" name="password" required id="password"pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                <input class="input"  placeholder="Senha:" type="password" th:field="*{senha}" required id="password"pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
                 title="A senha deve conter pelo menos 8 caracteres, uma letra maiúscula, uma letra minúscula e um número." />
 
                 <br>

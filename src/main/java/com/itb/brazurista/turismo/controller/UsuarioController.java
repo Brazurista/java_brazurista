@@ -29,6 +29,7 @@ public class UsuarioController {
 	@PostMapping("/add-usuario")
 	String addNovoUsuario(Usuario usuario, Model model) {
 		
+		usuario.setCodStatusUsuario(true);
 		Usuario usuarioBd = usuarioRepository.save(usuario);
 		
 		return "redirect:/brazurista/usuario/cadastro/sucesso";
