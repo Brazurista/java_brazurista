@@ -21,7 +21,7 @@ public class Usuario {
 	private String senha;
 	private String telefone;
 	
-	private boolean codStatusUsuario;
+	private boolean codStatusUsuario = true;
 	
 	// Sette's e Getter's
 	

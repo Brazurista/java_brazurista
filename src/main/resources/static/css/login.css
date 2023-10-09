@@ -42,8 +42,8 @@
 
     .container-input{
       position: relative;
-      margin-bottom: 20px;
-      height: 15vh;
+      margin-bottom: 0px;
+      height: 9vh;
     }
     
     .placeholder {
@@ -69,15 +69,15 @@
       opacity: 0.5;
     }
     .input{
-      margin-top: 20px;
-      height: 30px;
-      max-width: 400px;
-      width: 30vw;
-      background-color: #7FB239;
-      color: aliceblue;
-      padding-left: 10px;
-      border: 0px solid black;
-      border-radius: 5px;
+	    margin-top: 20px;
+	    height: 30px;
+	    max-width: 400px;
+	    width: 30vw;
+	    background-color: rgb(255, 255, 255);
+	    color: rgb(0, 0, 0);
+	    padding-left: 10px;
+	    border: 1px solid #7FB239;
+	    border-radius: 8px;
     }
     
     .input:focus + .placeholder{
@@ -88,9 +88,6 @@
       padding: 0 5px;
       opacity: 1;
       color: rgb(0, 0, 0);
-    }
-    .input:focus{
-      background-color: #b3dd7a;
     }
     .input:focus + .placeholder2{
       top: -5px;

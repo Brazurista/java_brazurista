@@ -19,14 +19,14 @@
           <br>
           <p>Entre com sua conta no Brazurista, faça login com suas informações pessoais</p>
           <br>
-          <input class="botao" type="submit" value="Faça seu login" />
+          <a href="/brazurista/login"><input class="botao" type="submit" value="Faça seu login" /></a>
         </div>
       </div>
       <div class="container-form">
           <form class="form" th:action="@{/brazurista/add-usuario}" th:object="${usuario}" id="form-login" method="post">
               <h2 class="titulo">Crie sua conta, e aproveite o Brazurista!</h2>
               <div class="container-input">
-			  <input class="input" type="text" th:field="*{nome}" name="nome" required id="nome" placeholder="Nome:"/>
+			  <input class="input" type="text" th:field="*{nome}"  name="nome" required id="nome" placeholder="Nome:"/>
 				</div>
 			<div class="container-input">
 			  <input class="input" type="text" th:field="*{telefone}" name="telefone" required id="telefone" maxlength="10" placeholder="Telefone:"/>
