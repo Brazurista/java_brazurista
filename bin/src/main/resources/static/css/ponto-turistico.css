@@ -1,0 +1,136 @@
+.container-top{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 95vw;
+    margin-top: 50px;
+    font-size: 1.2rem;
+}
+.container-img{
+    margin-top: 20px;
+    height: 279px;
+    width: 570px;
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    grid-template-rows: repeat(5, 50px);
+    column-gap: 10px;
+    row-gap: 8px;
+    position: relative;
+}
+.container-img img:first-child{
+    height:280px;
+    width: 486px;
+    grid-column: 1; 
+    grid-row: 1 / span 5;
+}
+.container-img img{
+    height: 47.5px;
+    width: 74px;
+    gap: 0px;
+}
+
+.sobre-img{
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    height: 47.5px;
+    width: 74px;
+    background-color: black;
+    opacity: 0.5;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.line{
+    margin-top: 50px;
+    margin-bottom: 20px;
+    height: 3px;
+    width: 60vw;
+    background-color:#7FB239;
+}
+.sobre{
+    width: 90vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.sobre div{
+    width: 50vw;
+    
+}
+.sobre p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.88rem;
+}
+.localiza{
+    display: flex;
+}
+.avaliacao{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.avaliacao h1{
+    font-size: 2.5rem;
+}
+.container-fav{
+    width: 80vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.progress-bar {
+    margin-left: 40px ;
+    margin-bottom: 7px;
+    width: 20vw;
+    height: 15px; 
+    background-color: #ccc;
+    border-radius: 20px;
+    display: flex;
+    position: relative;
+  }
+
+.progress-bar span{
+    position: absolute;
+    right: -50px;
+  }
+  
+  .progress {
+    width: 0; 
+    height: 100%; 
+    background-color: rgb(255, 187, 0);; 
+    transition: width 0.5s ease-in-out; 
+    border-radius: 20px;
+  }
+  #progress1 {
+    width: 0; 
+    height: 100%; 
+    background-color: rgb(255, 187, 0);; 
+    transition: width 0.5s ease-in-out; 
+    border-radius: 20px;
+  }
+  .progress3{
+    width: 0; 
+    height: 100%; 
+    background-color: rgb(255, 187, 0);; 
+    transition: width 0.5s ease-in-out; 
+    border-radius: 20px;
+  }
+  .progress4{
+    width: 0; 
+    height: 100%; 
+    background-color: rgb(255, 187, 0);; 
+    transition: width 0.5s ease-in-out; 
+    border-radius: 20px;
+  }
+  .progress5{
+    width: 0; 
+    height: 100%; 
+    background-color: rgb(255, 187, 0);; 
+    transition: width 0.5s ease-in-out; 
+    border-radius: 20px;
+  }

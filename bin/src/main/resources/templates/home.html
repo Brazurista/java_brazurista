@@ -6,13 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio</title>
     <!-- css -->
-    <link rel="stylesheet" href="/static/css/index.css"> 
-    <link rel="stylesheet" href="/static/css/global.css">
+    <link rel="stylesheet" href="/css/index.css"> 
+    <link rel="stylesheet" href="/css/global.css">
+    <link rel="stylesheet" href="/css/home.css">
     <!-- links -->
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="https://kit.fontawesome.com/ae37c4f9c1.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -35,28 +32,29 @@
                     <span><a class="link_nav" >Restaurante</a></span>
                 </li>
                 <li>
-                    <span><a class="link_nav" href="/brazurista/login" >Faça seu login</a></span>
+                    <div class="user">
+                        <span id="username">
+                            
+                        </span>
+                        <div class="user-circle">
+                            <i class="fa-solid fa-user"></i>
+                        </div>
+                    </div>
                 </li>
-                <li>
-                    <div class="input-login">
-                   <a class="link_nav" id="link_nav_login" href="/brazurista/cadastro">Cadastre-se</a>
+                 <li>
+                 </li>
                     </div>
                 </li>
             </ul>
         </nav>
     </header>
     <main class="container-main">
-        <div class="background-carousel">
-            <div><img src="/static/img/bahia.jpg" alt="Imagem 1"></div>
-            <div><img src="/static/img/Brazurista.png" alt="Imagem 2"></div>
-            <div><img src="imagem3.jpg" alt="Imagem 3"></div>
-        </div>
-        
+        <img src="img/logo-sp.jpg" alt="" class="img-top">
         <section class="container-search">
-            <form action="/brazurista/pesquisa" class="search-bar">
-                <input type="text" class="search" placeholder="Digite seu destino aqui" name="pesquisa" id="source">
-                <span class="lupa"><i class="fa-solid fa-magnifying-glass"></i></span>
-            </form>
+                <form action="pesquisa.html" class="search-bar">
+                    <input type="text" class="search" placeholder="Digite seu destino aqui" name="pesquisa" id="source">
+                    <span class="lupa"><i class="fa-solid fa-magnifying-glass"></i></span>
+                </form>
         </section>
         <section class="container-slider">
             <span>Os melhores destinos para aproveitar com a família!</span>
@@ -134,23 +132,18 @@
     </footer>
    <script src="js/header.js"></script>
    <script>
-        $(document).ready(function(){
-    $('.background-carousel').slick({
-        autoplay: true,
-        autoplaySpeed: 3000, // 
-        fade: true, 
-        cssEase: 'linear', 
-    });
-    });
+        
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+        const userName = urlParams.get('userName');
 
-   </script>
-   <script>
+        document.getElementById('username').textContent = userName
 
         const pontoRj = document.getElementById('ponto-rj')
 
          
         pontoRj.addEventListener('click', function () {
-            window.location.href = '/brazurista/ponto-Rj';
+            window.location.href = 'ponto-Rj.html';
             });
 
         
@@ -159,8 +152,6 @@
 
             if(e === 1){
                 direcao.scrollLeft = direcao.scrollLeft - 500
-             
-
             }
 
             else if( e == 2){
