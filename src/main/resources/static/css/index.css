@@ -10,11 +10,11 @@
 /* .container-search */
 .container-search {
     position: absolute;
-    top: 13vh;
+    top: 30vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 50vh;
+    height: 0;
     width: 80%;
 }
 

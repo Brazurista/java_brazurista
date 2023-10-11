@@ -7,9 +7,15 @@
     justify-content: start;
     position: relative;
 }
+.title-sobre{
+	font-size: 2rem;
+}
 .lupa{
     position: absolute;
     left: 50px;
+}
+.yellow{
+	color:rgb(255, 204, 0)
 }
 .search {
     width: 60vw;
@@ -36,17 +42,18 @@
   }
 
 .input-buscar:hover {
-    background-color: rgb(253, 216, 4);
+    background-color: rgb(172, 211, 118);
   }
 
 .input-buscar{
     width: 18vh;
     height: 35px;
     border-radius: 14px;
-    background-color: rgba(255, 204, 0,1);
+    background-color: #7FB239;
     font-weight: bolder;
     font-size: large;
     border: none;
+    color:white;
 }
 .resultadoPesquisa{
     display: flex;
@@ -57,7 +64,7 @@
 }
 
 .text-amarelo{
-    color: rgba(255, 204, 0,1);
+    color: rgb(48, 48, 48);
 }
 /* Result of the search */
 .resultadoturistico{
@@ -70,7 +77,6 @@
 }
 .ponto-turistico{
     display: flex;
-    align-items: center;
     justify-content: center;
     height: 280px;
     width: 90vw;
@@ -81,15 +87,15 @@
     position: relative;
 }
 .container-img-sobre{
-    width: 245px; 
+    width: 345px; 
     height: 280px; 
     overflow: hidden;
     border-radius: 8px;
     
 }
 .ponto-imagem {
-    width: 280px; 
-    height: 280px; 
+    width: 350px; 
+    height: 180px; 
     overflow: hidden;
     transition: transform 0.5s; 
     border-radius: 5px;
@@ -113,9 +119,6 @@
 .ponto-turistico:hover .ponto-imagem  {
     transform: scale(1.2);
 }
-.ponto-turistico:hover .title-sobre  {
-    text-decoration:underline 3px rgb(255, 238, 0);
-}
 
 
 .ponto-sobre{
@@ -123,9 +126,11 @@
     width: 50vw;
     display: flex;
     flex-direction: column;
-    color: black;
-    font-size:medium;
-    font-weight:900;
+    font-weight:500;
+}
+
+.ponto-sobre span{
+    font-weight:500;
   
 }
 

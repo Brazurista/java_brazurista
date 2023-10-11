@@ -10,7 +10,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name="usuario")
-public class Usuario {
+public class Usuario{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY) //Auto-Incremento
